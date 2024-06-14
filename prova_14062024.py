@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 
 st.header("Dados da Empresa")
 
-st.set_page_config(page_title="Prova_14062024")
+st.set_page_config(page_title="Prova")
 
 st.code(code, language='python')
  
