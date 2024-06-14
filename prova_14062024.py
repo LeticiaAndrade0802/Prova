@@ -9,7 +9,7 @@ st.set_page_config(page_title="Prova_14062024")
 
 st.code(code, language='python')
  
-df = pd.read_csv=("https://raw.githubusercontent.com/LeticiaAndrade0802/Prova/main/projetos%20(1).csv",sep=";")
+df = pd.read_csv("https://raw.githubusercontent.com/LeticiaAndrade0802/Prova/main/projetos%20(1).csv", sep= ';')
 st.dataframe(df)
  
 st.write("Uso do `st.experimental_data_editor()` para edição do dataframe na tela")
