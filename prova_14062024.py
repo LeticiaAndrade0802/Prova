@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 
 st.header("Dados da Empresa")
 
-st.set_page_config(page_title="Prova",)
+st.set_page_config(page_title="Prova Leticia e Gilmar",)
 
 st.code(code, language='python')
  
@@ -67,7 +67,7 @@ st.pyplot(fig)
  
 st.write("Criação do gráfico do tipo histograma com os dados do `Projeto 1` e `Projeto4`")
  
-# Geração do gráfico
+#Apresentando o Gráfico
 #fig, ax = plt.subplots()
 df["Projeto4"].plot(kind='hist', ax=ax)
 # Exibição do gráfico no Streamlit
@@ -75,10 +75,11 @@ st.pyplot(fig)
  
 st.code(code, language='python')
  
-# Geração do gráfico
+#Apresentando o Gráfico 
 fig, ax = plt.subplots()
 df["Projeto4"].plot(kind='hist', ax=ax)
-# Exibição do gráfico no Streamlit
+
+#Apresentação do Gráfico no Streamlit
 st.pyplot(fig)
 
-tem menu de contexto
+
