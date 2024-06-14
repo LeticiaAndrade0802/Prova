@@ -1,6 +1,5 @@
 import pandas as pd
 import streamlit as st
-import ipeadatapy as ip
 import matplotlib.pyplot as plt
 
 
