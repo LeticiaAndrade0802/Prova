@@ -2,7 +2,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import streamlit as st
 
-code= 
+
 st.header("Dados da empresa 1")
  
 arquivo = "https://github.com/LeticiaAndrade0802/Prova/blob/main/empresa1.csv" 
@@ -18,6 +18,6 @@ df = pd.concat([df, df1])
 st(df.tail())
 
 colunas = ['Projeto1', 'Projeto2', 'Projeto3', 'Projeto4', 'Projeto5']
-df.groupby('ano')[colunas].sum()
+st.groupby('ano')[colunas].sum()
 
-st.code(código, language='python')
+
