@@ -5,6 +5,10 @@ import matplotlib.pyplot as plt
 
 
 st.header("Dados da Empresa")
+
+st.set_page_config(page_title="Prova",)
+
+st.code(code, language='python')
  
 arquivo = "https://raw.github.com/LeticiaAndrade0802/Prova/blob/main/projetos%20(1).csv" 
 dfe = pd.read_csv(arquivo, sep=';') 
