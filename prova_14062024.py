@@ -5,7 +5,7 @@ import streamlit as st
  
 st.header("Dados da empresa 14 06 2024")
  
-arquivo = "https://raw.githubusercontent.com/LeticiaAndrade0802/aula_teste-/main/empresa1.csv" 
+arquivo = "https://raw.githubusercontent.com/LeticiaAndrade0802/prova/main/empresa1.csv" 
 dfe = pd.read_csv(arquivo, sep=';') 
 st.dataframe(dfe.head(3))
  
