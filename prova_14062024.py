@@ -5,11 +5,11 @@ import matplotlib.pyplot as plt
 
 st.header("Dados da Empresa")
 
-st.set_page_config(page_title="Prova Leticia e Gilmar",)
+st.set_page_config(page_title="Prova_14062024")
 
 st.code(code, language='python')
  
-arquivo = "https://raw.githubusercontent.com/LeticiaAndrade0802/Prova/main/projetos%20(1).csv" 
+df = pd.read_csv=("https://raw.githubusercontent.com/LeticiaAndrade0802/Prova/main/projetos%20(1).csv",sep=';')
 st.dataframe(df)
  
 st.write("Uso do `st.experimental_data_editor()` para edição do dataframe na tela")
