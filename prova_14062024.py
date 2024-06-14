@@ -10,7 +10,7 @@ st.set_page_config(page_title="Prova",)
 
 st.code(code, language='python')
  
-arquivo = "https://raw.github.com/LeticiaAndrade0802/Prova/blob/main/projetos%20(1).csv" 
+arquivo = "https://raw.githubbusercontent.com/LeticiaAndrade0802/Prova/blob/main/projetos%20(1).csv" 
 dfe = pd.read_csv(arquivo, sep=';') 
 st.dfe(head(23))
 
