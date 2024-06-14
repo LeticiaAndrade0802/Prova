@@ -11,33 +11,74 @@ st.set_page_config(page_title="Prova",)
 st.code(code, language='python')
  
 arquivo = "https://raw.githubusercontent.com/LeticiaAndrade0802/Prova/main/projetos%20(1).csv" 
-dfe = pd.read_csv(arquivo, sep=';') 
-st.dfe(head(23))
-
-
+st.dataframe(df)
+ 
+st.write("Uso do `st.experimental_data_editor()` para edição do dataframe na tela")
+ 
+code = '''edited_df = st.experimental_data_editor(df, num_rows="dynamic")'''
+st.code(code, language='python')
+ 
+edited_df = st.experimental_data_editor(df, num_rows="dynamic")
+ 
+"---"  
+ 
+st.write("Usando `st.checkbox()` para deixar o leitor escolher se vai mostrar a tabela ou não")
+ 
+code = '''
+if st.checkbox('Mostrar dataframe'):
+    # usando o streamlit para apresentar como df dinâmico e formatação adicional (max)
+    st.dataframe(df.style.highlight_max(axis=0)) 
+    '''
+st.code(code, language='python')
+ 
+if st.checkbox('Mostrar dataframe'):
+    # usando o streamlit para apresentar como df dinâmico e formatação adicional (max)
+    st.dataframe(df.style.highlight_max(axis=0))
+ 
+"---"    
+ 
+st.write("Adicionando nova linha")
+ 
+st.code(code, language='python')
+ 
 df1 = pd.DataFrame({'mes': [12], 'ano': [2023], 'Projeto1': [29376], 'Projeto2': [40392], 'Projeto3': [63648], 'Projeto4': [29376], 'Projeto5': [25704] })
 df = pd.concat([df, df1])
-st(df1.tail())
-
-fig, ax = colunas = ['Projeto1', 'Projeto2', 'Projeto3', 'Projeto4', 'Projeto5']
-st.groupby('ano')[colunas].sum()
+st.write(df)
+ 
+"---"  
+ 
+st.write("Apresentação da soma dos valores de cada projeto agrupado por ano")
+ 
+st.code(code, language='python')
+ 
+st.write(df.groupby('ano').sum())
+ 
+"---"  
+ 
+st.write("Geração do gráfico de dispersão cruzando os dados do `Projeto1` e `Projeto2`")
+ 
+st.code(code, language='python')
+ 
+fig, ax = plt.subplots()
+df.plot(kind = 'scatter', x = 'Projeto1', y = 'Projeto2', ax=ax)
+st.pyplot(fig)
+ 
+"---"  
+ 
+st.write("Criação do gráfico do tipo histograma com os dados do `Projeto 1` e `Projeto4`")
+ 
+# Geração do gráfico
+#fig, ax = plt.subplots()
+df["Projeto4"].plot(kind='hist', ax=ax)
+# Exibição do gráfico no Streamlit
+st.pyplot(fig)
+ 
+st.code(code, language='python')
+ 
+# Geração do gráfico
+fig, ax = plt.subplots()
+df["Projeto4"].plot(kind='hist', ax=ax)
+# Exibição do gráfico no Streamlit
 st.pyplot(fig)
 
-df.plot(kind = 'scatter', x = 'Projeto1', y = 'Projeto2', color='darkgreen', marker='*')
-st.pyplot.show()
-
-df["Projeto1"].plot(kind = 'hist')
-df["Projeto4"].plot(kind = 'hist')
-plt.show()
-st.pyplot(df)
-
-st.list_series('Selic')
-
-selic = ip.timeseries('BM12_TJOVER12', yearGreaterThan=2021, yearSmallerThan=2024)
-st.selic
-
-ip.timeseries('BM12_TJOVER12', year=2021).plot("MONTH", "VALUE ((% a.m.))")
-ip.timeseries('BM12_TJOVER12', year=2022).plot("MONTH", "VALUE ((% a.m.))")
-st.plt.show()
-
-
+tem menu de contexto
