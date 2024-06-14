@@ -1,7 +1,7 @@
-import pandas as pd
-import streamlit as st
+import pandas as pd  
 import matplotlib.pyplot as plt
-
+import ipeadatapy as ip
+import streamlit as st
 
 st.header("Dados da Empresa")
 
