@@ -3,7 +3,6 @@ import streamlit as st
 import ipeadatapy as ip
 import matplotlib.pyplot as plt
  
-st.header("Dados da Empresa - Prova 14 06 2024") 
 
 st.set_page_config(
     page_title="Prova",
