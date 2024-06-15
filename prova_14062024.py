@@ -69,13 +69,13 @@ st.write("Criação do gráfico do tipo histograma com os dados do `Projeto 1` e
 # Geração do gráfico
 #fig, ax = plt.subplots()
 df["Projeto4"].plot(kind='hist', ax=ax)
-# Apresentando o gráfico no Streamlit
+# Exibição do gráfico no Streamlit
 st.pyplot(fig)
  
 st.code(code, language='python')
  
-# Gerando o Gráfico
+# Geração do gráfico
 fig, ax = plt.subplots()
 df["Projeto4"].plot(kind='hist', ax=ax)
-# Apresentando Gráfico no Streamlit
+# Exibição do gráfico no Streamlit
 st.pyplot(fig)
