@@ -10,7 +10,6 @@ st.set_page_config(
 )
  
  
-st.code(code, language='python')
  
 df = pd.read_csv("https://raw.githubusercontent.com/LeticiaAndrade0802/Prova/main/projetos%20(1).csv", sep=";") 
 st.dataframe(df)
