@@ -1,15 +1,18 @@
-import pandas as pd  
-import matplotlib.pyplot as plt
-import ipeadatapy as ip
+#importando as bibliotecas
+import pandas as pd
 import streamlit as st
-
-st.header("Dados da Empresa")
-
-st.set_page_config(page_title="Prova")
-
+import ipeadatapy as ip
+import matplotlib.pyplot as plt
+ 
+# título na barra do navegador
+st.set_page_config(
+    page_title="Prova 14_06",
+)
+ 
+ 
 st.code(code, language='python')
  
-df = pd.read_csv("https://raw.githubusercontent.com/LeticiaAndrade0802/Prova/main/projetos%20(1).csv", sep= ';')
+df = pd.read_csv("https://raw.githubusercontent.com/LeticiaAndrade0802/Prova/main/projetos%20(1).csv", sep=";") 
 st.dataframe(df)
  
 st.write("Uso do `st.experimental_data_editor()` para edição do dataframe na tela")
@@ -66,7 +69,7 @@ st.pyplot(fig)
  
 st.write("Criação do gráfico do tipo histograma com os dados do `Projeto 1` e `Projeto4`")
  
-#Apresentando o Gráfico
+# Geração do gráfico
 #fig, ax = plt.subplots()
 df["Projeto4"].plot(kind='hist', ax=ax)
 # Exibição do gráfico no Streamlit
@@ -74,11 +77,8 @@ st.pyplot(fig)
  
 st.code(code, language='python')
  
-#Apresentando o Gráfico 
+# Geração do gráfico
 fig, ax = plt.subplots()
 df["Projeto4"].plot(kind='hist', ax=ax)
-
-#Apresentação do Gráfico no Streamlit
+# Exibição do gráfico no Streamlit
 st.pyplot(fig)
-
-
