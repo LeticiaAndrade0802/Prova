@@ -2,7 +2,8 @@ import pandas as pd
 import streamlit as st
 import ipeadatapy as ip
 import matplotlib.pyplot as plt
- 
+
+st.header("Dados da empresa - Prova 14 06 2024")
 
 st.set_page_config(
     page_title="Prova",
@@ -65,16 +66,16 @@ st.pyplot(fig)
  
 st.write("Criação do gráfico do tipo histograma com os dados do `Projeto 1` e `Projeto4`")
  
-# Geração do gráfico
+# Gerando o Gráfico
 #fig, ax = plt.subplots()
 df["Projeto4"].plot(kind='hist', ax=ax)
-# Exibição do gráfico no Streamlit
+# Exibindo o gráfico no Streamlit
 st.pyplot(fig)
  
 st.code(code, language='python')
  
-# Geração do gráfico
+# Gerando o gráfico
 fig, ax = plt.subplots()
 df["Projeto4"].plot(kind='hist', ax=ax)
-# Exibição do gráfico no Streamlit
+# Exibindo o gráfico no Streamlit
 st.pyplot(fig)
