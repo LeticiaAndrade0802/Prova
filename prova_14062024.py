@@ -7,6 +7,8 @@ import matplotlib.pyplot as plt
 st.set_page_config(
     page_title="Prova",
 )
+
+st.header("Dados da empresa - Prova 14 06 2024")
   
 df = pd.read_csv("https://raw.githubusercontent.com/LeticiaAndrade0802/Prova/main/projetos%20(1).csv", sep=";") 
 st.dataframe(df)
